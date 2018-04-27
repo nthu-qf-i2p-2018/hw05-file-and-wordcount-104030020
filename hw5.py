@@ -20,16 +20,13 @@ def main(filename):
     all_words = []
 
     for line in lines:
+        line = line.strip()
         words = line.split()
 
         
         for word in words:
-            
-            for a in string.punctuation:
-                if a in word:
-                    if((word.index(a) == len(word) - 1) | (word.index(a) == 0)):
-                        word = word.replace(a, "")
-                 
+            word = word.strip(string.punctuation)
+          
             if word:
                 all_words.append(word)
 
