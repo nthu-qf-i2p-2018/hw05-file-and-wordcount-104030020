@@ -42,11 +42,11 @@ def main(filename):
 
     
     with open("wordcount.json", "w") as json_file:
-        writer = json.dump(counter.most_common(), json_file)
+        json.dump(counter.most_common(), json_file)
 
     
     with open("wordcount.pkl", "wb") as pkl_file:
-        writer = pickle.dump(counter.most_common(), pkl_file)
+        pickle.dump(counter.most_common(), pkl_file)
 
 
 # In[3]:
